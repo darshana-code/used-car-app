@@ -55,6 +55,12 @@ This is a Laravel project for managing used cars. It includes features for searc
     ```bash
     ./vendor/bin/sail artisan migrate
     ```
+    After Migrating the db, seed the db with car and manufacturer data using following command:
+
+    ```bash
+    ./vendor/bin/sail artisan db:seed --class=ImportDataFromExcelSeeder
+    ```
+
  
 7. **Access the Application**
 
@@ -81,5 +87,8 @@ To run your tests, you can use:
     ```bash
     ./vendor/bin/sail artisan <command>
     ```
+
+**Note**: Used "./vendor/bin/sail composer require maatwebsite/excel" to read data from excel. 
+The excel file is being placed in "resources/excel/data.xlsx" to import in db.
 
 
